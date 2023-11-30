@@ -1,10 +1,13 @@
 import Artigo from "./Artigo";
+import { WiAlien } from "react-icons/wi";
 
 function Conteudo() {
   return (
     <main>
       <section>
-        <h2>Conteúdo da aplicação</h2>
+        <h2>
+          Conteúdo da aplicação <WiAlien />
+        </h2>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
@@ -16,6 +19,16 @@ function Conteudo() {
         <Artigo />
         <Artigo />
         <Artigo />
+
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/KY_uWm0qjmU?si=TKgdqc0BebIIqXe-"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </section>
     </main>
   );

@@ -1,0 +1,26 @@
+/* Folha de estilos global que será usada em todos 
+os componentes da aplicação */
+
+/* Ajuste do Box Model com box-sizing */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Reset */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 2%;
+}
+
+html {
+  font-size: 18px;
+}
+.sombra {
+  box-shadow: red 0 0 10px;
+  background-color: white;
+}
