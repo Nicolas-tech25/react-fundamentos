@@ -13,6 +13,10 @@ function Cabecalho() {
 
       <Menu />
       <hr />
+
+      <p className={`${style["destaque-texto"]} centralizar`}>
+        Classes combinadas
+      </p>
     </header>
     /* Comentário no meio de JS é normal ficar entre { nesta situação} */
   );
