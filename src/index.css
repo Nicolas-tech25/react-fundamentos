@@ -20,6 +20,10 @@ p {
 html {
   font-size: 18px;
 }
+body {
+  background-color: black;
+  color: white;
+}
 .sombra {
   box-shadow: red 0 0 10px;
   background-color: white;
@@ -33,4 +37,50 @@ html {
 
 .centralizar {
   text-align: center;
+}
+iframe {
+  margin: 100px;
+}
+
+/* menu */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+/* article */
+.article-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 20%;
+}
+
+article h3 {
+  color: #333;
+}
+
+article p {
+  color: #555;
 }

@@ -20,6 +20,8 @@ function Conteudo() {
         <Artigo />
         <Artigo />
 
+        <hr />
+
         <iframe
           width="560"
           height="315"
