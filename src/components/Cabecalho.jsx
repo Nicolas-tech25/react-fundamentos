@@ -7,7 +7,8 @@ function Cabecalho() {
   return (
     <header>
       <h1>
-        Olá <span className={style.sombra}>React!</span> 🎈
+        <span className={style["destaque-texto"]}>Olá</span>{" "}
+        <span className={style.sombra}>React!</span> 🎈
       </h1>
 
       <Menu />

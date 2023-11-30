@@ -9,7 +9,7 @@ function Rodape() {
   return (
     <footer style={exemploEstilos}>
       <h2>Rodapé da aplicação</h2>
-      <p>Fundamentos de react</p>
+      <p className="destaque-texto">Fundamentos de react</p>
       <p>
         experimentando <b className="sombra">classes</b>
       </p>
