@@ -1,8 +1,10 @@
+import { StyledRodape } from "../styles/style";
+
 function Rodape() {
   return (
-    <footer>
+    <StyledRodape>
       <h2>Rodapé da aplicação</h2>
-    </footer>
+    </StyledRodape>
   );
 }
 
