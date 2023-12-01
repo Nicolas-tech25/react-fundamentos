@@ -1,8 +1,29 @@
-# React + Vite
+# Fundamentos de React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Resumo/Revisão
 
-Currently, two official plugins are available:
+JSX -> HTML + JS para criar componentes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- App.jsx (Componente PRINCIPAL)
+- main.jsx (Inicialização do React)
+- index.html (elemento raíz e chamada do script)
+
+## 04-estilos
+
+### CSS in JS-
+
+- CSS inline: aplicado via atributo style da tag usando sintaxe JS, ou seja, objeto com propriedades.
+
+- CSS externo e global usando arquivo.css e importando no main.jsx
+
+- CSS Module: arquivo CSS especial relacionado ao componente que desejamos estilizar. Normalmente, nomeia-se o arquivo como "NomeComponente.module.css". A vantagem de usar CSS Modules é criar um escopo de estilização evitando conflitos de classes com mesmo nome.
+
+---
+
+## 00-projeto-resetado
+
+### Informações gerais
+
+A renderização ocorre na seguinte sequencia:
+
+index.html <- main.jsx <- App.jsx
