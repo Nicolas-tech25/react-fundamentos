@@ -62,12 +62,7 @@ nav a:hover {
   color: black;
 }
 
-/* article */
-.article-container {
-  display: flex;
-  justify-content: space-between;
-}
-
+/* articles */
 article {
   background-color: #fff;
   padding: 20px;
