@@ -13,31 +13,20 @@ const StyledArtigo = styled.article`
   p {
     font-size: 1.1rem;
   }
-  .centralizar {
-    text-align: center;
-  }
 `;
 
-function Artigo({ imagem, icones, titulo, descricao, data, children }) {
+function Artigo({ titulo, categoria, preco }) {
   return (
     <StyledArtigo>
-      <p className="centralizar">
-        <img src={imagem} alt="" />
-      </p>
-
-      <h3 className="centralizar">
-        <span>{icones}</span>
-        {titulo}
+      <h3>
+        <b>{categoria} </b>
       </h3>
-
-      <p>{descricao}</p>
-
       <p>
-        <b>Lançamento: </b>
-        <time>{data}</time>
+        <b>Curso: {titulo} </b>
       </p>
-
-      {children}
+      <p>
+        <b>Preço: {preco}</b>
+      </p>
     </StyledArtigo>
   );
 }
