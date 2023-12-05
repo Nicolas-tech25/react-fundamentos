@@ -15,11 +15,19 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo() {
+function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>Artigo 1</h3>
-      <p>Conteúdo do artigo 1....</p>
+      <p className="centralizar">
+        <img src={props.imagem} alt="" />
+      </p>
+
+      <h3>
+        <span>{props.icones}</span>
+        {props.titulo}
+      </h3>
+      <p>{props.descricao}</p>
+      <time>{props.data}</time>
     </StyledArtigo>
   );
 }
