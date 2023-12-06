@@ -47,7 +47,7 @@ function Conteudo() {
 
       <br />
 
-      <button onClick={exemplo3}>
+      <button onClick={() => exemplo3("Estou com o pai")}>
         Exemplo 3(Acionando o evento / função através do conteudo [pai])
       </button>
 
