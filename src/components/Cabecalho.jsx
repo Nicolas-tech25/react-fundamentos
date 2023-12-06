@@ -1,5 +1,5 @@
 import Menu from "./Menu";
-
+import { useState } from "react";
 /* Impprtação da lib STYLED  */
 import styled from "styled-components";
 
@@ -20,10 +20,19 @@ const StyledCabecalho = styled.header`
 `;
 
 function Cabecalho() {
+  /* Usando gerenciamento de states 
+  Aqui definimos a chamada de uma função especial do react: 'use state'. Estas ee outras funções INICIADAS COM O PREFIXO 'USE'  que são conhecidas como React HOOkS 
+  
+  No caso do useState , usando desestruturação, criamos uma variável que representa o valor do state*/
+  const [titulo, setTitulo] = useState("Olá React! 🎈");
+
+  const mudarTitulo = () => {
+    setTitulo("Salvee! Kage na voz🎙");
+  };
   return (
     <header>
       <StyledCabecalho>
-        <h1>Olá React! 🎈</h1>
+        <h1 onClick={mudarTitulo}>{titulo}</h1>
         <hr />
         <Menu />
       </StyledCabecalho>
