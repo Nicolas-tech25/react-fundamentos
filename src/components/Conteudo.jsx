@@ -16,14 +16,16 @@ const StyledConteudo = styled.main`
   p {
     padding: 0.2rem 0;
   }
+
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      justify-content: space-between;
 
       & article {
-        width: 45%;
+        width: 48%;
+        margin: 1%;
       }
     }
   }

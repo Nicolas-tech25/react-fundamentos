@@ -3,6 +3,25 @@ import Menu from "./Menu";
 /* Impprtação da lib STYLED  */
 import styled from "styled-components";
 
+function Cabecalho() {
+  return (
+    <header>
+      <StyledCabecalho>
+        <h1
+          onClick={() => {
+            alert("exemplo1");
+          }}
+        >
+          Olá React! 🎈
+        </h1>
+        <hr />
+        <Menu />
+      </StyledCabecalho>
+    </header>
+    /* Comentário no meio de JS é normal ficar entre { nesta situação} */
+  );
+}
+
 const StyledCabecalho = styled.header`
   background-color: black;
   color: white;
@@ -18,18 +37,4 @@ const StyledCabecalho = styled.header`
     margin: auto;
   }
 `;
-
-function Cabecalho() {
-  return (
-    <header>
-      <StyledCabecalho>
-        <h1>Olá React! 🎈</h1>
-        <hr />
-        <Menu />
-      </StyledCabecalho>
-    </header>
-    /* Comentário no meio de JS é normal ficar entre { nesta situação} */
-  );
-}
-
 export default Cabecalho;
