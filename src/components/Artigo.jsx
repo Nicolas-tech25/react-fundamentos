@@ -16,16 +16,24 @@ const StyledArtigo = styled.article`
 `;
 
 function Artigo({ titulo, categoria, preco }) {
+  const formatarPreco = (valor) => {
+    return valor.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+
   return (
     <StyledArtigo>
       <h3>
         <b>{categoria} </b>
       </h3>
       <p>
-        <b>Curso: {titulo} </b>
+        <b>Curso: </b>
+        {titulo}
       </p>
       <p>
-        <b>Preço: {preco}</b>
+        <b>Preço:</b> {formatarPreco(preco)}
       </p>
     </StyledArtigo>
   );
