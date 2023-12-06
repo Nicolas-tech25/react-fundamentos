@@ -15,7 +15,7 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({ titulo, categoria, preco }) {
+function Artigo({ titulo, categoria, preco, aoclicar }) {
   const formatarPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
       style: "currency",
@@ -25,7 +25,7 @@ function Artigo({ titulo, categoria, preco }) {
 
   return (
     <StyledArtigo>
-      <h3>
+      <h3 onClick={aoclicar}>
         <b>{categoria} </b>
       </h3>
       <p>
