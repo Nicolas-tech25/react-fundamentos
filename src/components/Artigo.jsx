@@ -1,7 +1,8 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledArtigo = styled.article`
-  background-color: #ffffffe4;
+  background-color: ${(props) => props.bgColor || "#ffffffe4"};
   padding: 1rem;
   margin: 0.5rem 0;
 
@@ -16,6 +17,14 @@ const StyledArtigo = styled.article`
 `;
 
 function Artigo({ titulo, categoria, preco }) {
+  const [fundo, setNovoFundo] = useState("#ffffffe4");
+
+  const mudarFundo = () => {
+    setNovoFundo((novaCor) =>
+      novaCor === "#ffffffe4" ? "lightyellow" : "#ffffffe4"
+    );
+  };
+
   const formatarPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
       style: "currency",
@@ -24,7 +33,7 @@ function Artigo({ titulo, categoria, preco }) {
   };
 
   return (
-    <StyledArtigo>
+    <StyledArtigo bgColor={fundo} onClick={mudarFundo}>
       <h3>
         <b>{categoria} </b>
       </h3>
