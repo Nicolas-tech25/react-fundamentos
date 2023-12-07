@@ -24,10 +24,10 @@ function Cabecalho() {
   Aqui definimos a chamada de uma função especial do react: 'use state'. Estas ee outras funções INICIADAS COM O PREFIXO 'USE'  que são conhecidas como React HOOkS 
   
   No caso do useState , usando desestruturação, criamos uma variável que representa o valor do state*/
-  const [titulo, setTitulo] = useState("Olá React! 🎈");
+  const [titulo, setTitulo] = useState("Olá React! 🎃");
 
   const mudarTitulo = () => {
-    setTitulo("Salvee! Kage na voz🎙");
+    setTitulo("Salvee | Kage na voz 🦖");
   };
   return (
     <header>

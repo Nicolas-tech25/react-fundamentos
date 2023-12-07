@@ -1,28 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const StyledArtigo = styled.article`
-  background-color: ${(props) => props.bgColor || "#ffffffe4"};
-  padding: 1rem;
-  margin: 0.5rem 0;
+function Artigo(props) {
+  const [cor, setCor] = useState("#b9e0f4");
 
-  h3 {
-    border-bottom: 2px solid #3498db;
-    color: #3498db;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-`;
-
-function Artigo({ titulo, categoria, preco }) {
-  const [fundo, setNovoFundo] = useState("#ffffffe4");
-
-  const mudarFundo = () => {
-    setNovoFundo((novaCor) =>
-      novaCor === "#ffffffe4" ? "lightyellow" : "#ffffffe4"
-    );
+  const mudarCor = () => {
+    setCor(cor === "#b9e0f4" ? "#ffffb2" : "#b9e0f4");
   };
 
   const formatarPreco = (valor) => {
@@ -33,19 +16,38 @@ function Artigo({ titulo, categoria, preco }) {
   };
 
   return (
-    <StyledArtigo bgColor={fundo} onClick={mudarFundo}>
+    <StyledArtigo onClick={mudarCor} style={{ backgroundColor: cor }}>
       <h3>
-        <b>{categoria} </b>
+        <b>{props.categoria} </b>
       </h3>
       <p>
         <b>Curso: </b>
-        {titulo}
+        {props.titulo}
       </p>
       <p>
-        <b>Preço:</b> {formatarPreco(preco)}
+        <b>Preço:</b> {formatarPreco(props.preco)}
       </p>
     </StyledArtigo>
   );
 }
+
+const StyledArtigo = styled.article`
+  background-color: lavender;
+  padding: 1rem;
+  margin: 0.5rem 0;
+
+  h3 {
+    color: purple;
+    border-bottom: 1px solid;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .centralizar {
+    text-align: center;
+  }
+`;
 
 export default Artigo;
