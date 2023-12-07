@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+function Menu() {
+  return (
+    <StyledMenu>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/produtos">Produtos</NavLink>
+      <NavLink to="/contato">Contato</NavLink>
+    </StyledMenu>
+  );
+}
 
 const StyledMenu = styled.nav`
   height: 70px;
@@ -24,13 +35,4 @@ const StyledMenu = styled.nav`
   }
 `;
 
-function Menu() {
-  return (
-    <StyledMenu>
-      <a href="">Home</a>
-      <a href="">Produtos</a>
-      <a href="">Contato</a>
-    </StyledMenu>
-  );
-}
 export default Menu;

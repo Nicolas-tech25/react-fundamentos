@@ -5,16 +5,23 @@ import Contato from "./pages/contato";
 import Home from "./pages/home";
 import Produtos from "./pages/produtos";
 
+/* Importação de recursos/componentes */
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <Cabecalho />
-      <Container>
-        <Home />
-        <Produtos />
-        <Contato />
-      </Container>
-      <Rodape />
+      <BrowserRouter>
+        <Cabecalho />
+        <Container>
+          <Routes>
+            <Route Component={Home} exact path="/" />
+            <Route Component={Produtos} path="/produtos" />
+            <Route Component={Contato} path="/contato" />
+          </Routes>
+        </Container>
+        <Rodape />
+      </BrowserRouter>
     </>
   );
 }
