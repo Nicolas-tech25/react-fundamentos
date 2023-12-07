@@ -6,7 +6,7 @@ import styled from "styled-components";
 import cursos from "../api/cursos";
 import { useState } from "react";
 
-function Conteudo() {
+function Cursos() {
   const [categoria, setCategoria] = useState(null);
 
   const aplicarFiltro = (event) => {
@@ -28,7 +28,7 @@ function Conteudo() {
   const quantidade = cursosFiltrados.length;
 
   return (
-    <StyledConteudo>
+    <StyledCursos>
       <h2>Conteúdo da aplicação</h2>
 
       <p>
@@ -79,11 +79,11 @@ function Conteudo() {
           />
         ))}
       </div>
-    </StyledConteudo>
+    </StyledCursos>
   );
 }
 
-const StyledConteudo = styled.main`
+const StyledCursos = styled.main`
   .filtros {
     margin: 1rem 0;
     padding: 1rem 0;
@@ -108,4 +108,4 @@ const StyledConteudo = styled.main`
   }
 `;
 
-export default Conteudo;
+export default Cursos;
