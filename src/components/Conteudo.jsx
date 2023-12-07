@@ -24,6 +24,9 @@ function Conteudo() {
     setCategoria(null);
   };
 
+  /* guardando a quantidade de cursos filtrados */
+  const quantidade = cursosFiltrados.length;
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -43,6 +46,7 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Design</button>
           <button onClick={aplicarFiltro}>Mobile</button>
           <button onClick={aplicarFiltro}>Gastronomia</button>
+          <button onClick={aplicarFiltro}>Música</button>
           {categoria && (
             <button onClick={limparFiltro}>🧹 Limpar filtro</button>
           )}
@@ -53,7 +57,17 @@ function Conteudo() {
             Você escolheu: | <b> {categoria} </b>{" "}
           </p>
         )}
+
+        {quantidade === 0 && (
+          <p style={{ color: "red", textAlign: "center" }}>
+            Não há cursos nesta categoria
+          </p>
+        )}
       </div>
+
+      <p>
+        Quantidade de cursos: <b>{quantidade}</b>
+      </p>
 
       <div className="artigos">
         {cursosFiltrados.map((curso) => (
