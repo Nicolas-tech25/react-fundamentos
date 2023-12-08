@@ -33,6 +33,10 @@ const StyledMenu = styled.nav`
       color: black;
     }
   }
+  .active {
+    background-color: white;
+    color: black;
+  }
 `;
 
 export default Menu;
